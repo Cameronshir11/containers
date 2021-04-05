@@ -75,10 +75,10 @@ class BST(BinaryTree):
         This makes it possible to automatically test whether
         insert/delete functions
         are actually working.
+
+        FIXME:
+        Implement this function.
         '''
-        if self.root:
-            return BST._is_bst_satisfied(self.root)
-        return True
 
     @staticmethod
     def _is_bst_satisfied(node):
