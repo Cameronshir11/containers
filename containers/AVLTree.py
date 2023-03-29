@@ -75,16 +75,16 @@ class AVLTree(BST):
         Modify Code will need to store node so the nodes do not have any explicit links to their parents
         so instead of modifying the original tree. Fix our code so it prints a new tree
         '''
-        origRoot = node
-        if origRoot.right:
-            newRoot = Node(origRoot.right.value)
-            newRoot.left = Node(origRoot.value)
-            newRoot.right = origRoot.right.right
-            newRoot.left.left = origRoot.left
-            newRoot.left.right = origRoot.right.left
-            return newRoot
+        orig_root = node
+        if orig_root.right:
+            new_root = Node(orig_root.right.value)
+            new_root.left = Node(orig_root.value)
+            new_root.right = orig_root.right.right
+            new_root.left.left = orig_root.left
+            new_root.left.right = orig_root.right.left
+            return new_root
         else:
-            return origRoot
+            return orig_root
 
     @staticmethod
     def _right_rotate(node):
