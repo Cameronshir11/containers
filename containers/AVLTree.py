@@ -57,7 +57,7 @@ class AVLTree(BST):
         # Check if balance factor is outside of [-1, 0, 1]
         if AVLTree._balance_factor(node) not in [-1, 0, 1]:
             return False
-         # Recursively check left and right subtrees
+        # Recursively check left and right subtrees
         left_subtree_satisfied = AVLTree._is_avl_satisfied(node.left)
         right_subtree_satisfied = AVLTree._is_avl_satisfied(node.right)
         return left_subtree_satisfied and right_subtree_satisfied
@@ -97,16 +97,16 @@ class AVLTree(BST):
         The textbook's class hierarchy for their AVL tree code is fairly different from our class hierarchy,
         however, so you will have to adapt their code.
         '''
-        origRoot = node
-        if origRoot.left:
-            newRoot = Node(origRoot.left.value)
-            newRoot.right = Node(origRoot.value)
-            newRoot.left = origRoot.left.left
-            newRoot.right.right = origRoot.right
-            newRoot.right.left = origRoot.left.right
-            return newRoot
+        orig_root = node
+        if orig_root.left:
+            new_root = Node(orig_root.left.value)
+            new_root.right = Node(orig_root.value)
+            new_root.left = orig_root.left.left
+            new_root.right.right = orig_root.right
+            new_root.right.left = orig_root.left.right
+            return new_root
         else:
-            return origRoot
+            return orig_root
 
     def insert(self, value):
         '''
