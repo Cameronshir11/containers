@@ -178,7 +178,7 @@ class Heap(BinaryTree):
         self.num_nodes -= 1
         # recursively swapping the root node with its largest child until heap is satisfied.
         Heap._trickle(self.root)
- 
+
     @staticmethod
     def _remove_bottom_right(node, b_str):
         '''
@@ -194,9 +194,9 @@ class Heap(BinaryTree):
                 node_to_remove = node.right
                 node.right = None
         elif b_str[0] == "0":
-                child_node = node.left
-                new_b_str = b_str[1:]
-                node_to_remove = Heap._remove_bottom_right(child_node, new_b_str)
+            child_node = node.left
+            new_b_str = b_str[1:]
+            node_to_remove = Heap._remove_bottom_right(child_node, new_b_str)
         else:
             child_node = node.right
             new_b_str = b_str[1:]
