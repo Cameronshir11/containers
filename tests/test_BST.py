@@ -314,8 +314,10 @@ def test__BST_iterable_1():
         pass
 
 
+'''
 @given(xs=ints)
 def test__BST_iterable_2(xs):
+'''
 @given(xs=ints)
 def test__BST_eq(xs):
     '''
