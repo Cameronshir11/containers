@@ -373,8 +373,6 @@ def test__BST_eq(xs):
     xs2 = copy.copy(xs)
     random.shuffle(xs2)
     bst2 = BST(xs2)
-<<<<<<< HEAD
-=======
 
     assert list(bst1) == list(bst2)
 
@@ -415,6 +413,5 @@ def test__BST_eq(xs):
     xs2 = copy.copy(xs)
     random.shuffle(xs2)
     bst2 = BST(xs2)
->>>>>>> heap
     
     assert bst1 == bst2
